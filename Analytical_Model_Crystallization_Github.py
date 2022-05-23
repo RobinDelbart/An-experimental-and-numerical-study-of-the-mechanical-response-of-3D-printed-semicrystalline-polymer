@@ -72,10 +72,7 @@ for i in range(0,5):
         Degree='110'
     if i == 4: 
         Degree='120'
-    if i == 5: 
-        Degree='130'
-    if i == 6: 
-        Degree='140'
+
     Data = pd.read_csv('crystallization '+Degree+' deg.csv.')
     Time=Data['Time']*60
     HF=-Data['Heat Flow Endo Down']
@@ -119,7 +116,6 @@ for i in range(0,5):
         dXc=Crystal[j+1]-Crystal[j]
 
         if i ==0:
-            # if ((j+1)%3==0 or j==0):
             Speed_Crystal_T80.append((0.56*dXc)/(dt))
             Speed_Time_T80.append(TimeArea[j])
             Rel_Cryst_T80.append(Crystal[j])
@@ -127,7 +123,6 @@ for i in range(0,5):
            
                 
         elif i ==1: 
-            # if (j+1)%3==0 or j==0:
             Speed_Crystal_T90.append((0.56*dXc)/(dt))
             Speed_Time_T90.append(TimeArea[j])
             Rel_Cryst_T90.append(Crystal[j])
@@ -135,7 +130,6 @@ for i in range(0,5):
        
                 
         elif i ==2: 
-            # if (j+1)%3==0 or j==0:
             Speed_Crystal_T100.append((0.56*dXc)/(dt))
             Speed_Time_T100.append(TimeArea[j])
             Rel_Cryst_T100.append(Crystal[j])
@@ -143,7 +137,6 @@ for i in range(0,5):
 
                 
         elif i ==3: 
-           # if (j+1)%3==0 or j==0:
             Speed_Crystal_T110.append((0.56*dXc)/(dt))
             Speed_Time_T110.append(TimeArea[j])
             Rel_Cryst_T110.append(Crystal[j])
@@ -156,22 +149,7 @@ for i in range(0,5):
             Speed_Time_T120.append(TimeArea[j])
             Rel_Cryst_T120.append(Crystal[j])
             Rel_TCryst_T120.append(TimeArea[j])
-
-                
-        elif i ==5: 
-           # if (j+1)%3==0 or j==0:
-            Speed_Crystal_T130.append((0.56*dXc)/(dt))
-            Speed_Time_T130.append(TimeArea[j])
-            Rel_Cryst_T130.append(Crystal[j])
-            Rel_TCryst_T130.append(TimeArea[j])
-                
-        elif i ==6: 
-           # if (j+1)%3==0 or j==0:
-            Speed_Crystal_T140.append((0.56*dXc)/(dt))
-            Speed_Time_T140.append(TimeArea[j])
-            Rel_Cryst_T140.append(Crystal[j])
-            Rel_TCryst_T140.append(TimeArea[j])
-                
+  
     
 
 for T in range(0,3):
